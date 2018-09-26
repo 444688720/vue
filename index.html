@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style>
+			#imgs{
+				width: 200px;
+				height: 200px;
+				margin: 0 auto;
+				margin-top: 100px;
+			}
+			#imgs img{
+				width: 200px;
+				height: 200px;
+			}
+			#logo ul{
+				width: 906px;
+				height: 20px;
+				margin-left: 280px;
+				margin-top: 50px;
+			}
+			#logo ul li{
+				float: left;
+				width:300px;
+				height: 20px;
+				border:  1px solid black;
+				text-align: center;
+				list-style: none;
+				background:darkgray;
+			}
+			#app{
+				
+				width: 1000px;
+				margin: 0 auto;
+				margin-top: 50px;
+			}
+			#app ul li{
+				list-style: none;
+				width: 150px;
+				height: 70px;
+				border: 1px solid darkgray;
+				margin-top: 10px;
+				padding-left: 40px;
+				border-radius: 10px;
+				box-shadow: 1px 1px 1px 1px;
+				background: darkgrey;
+			}
+			#app ul{
+				float: left;
+			}
+			.active{
+				color: red;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="imgs">
+			<img src="img/8435e5dde71190effc4b527bc51b9d16fcfa60e6.jpg"/>
+		</div>
+		<div id="logo">
+			<ul>
+				<li>姓名</li>
+				<li>座位</li>
+				<li>职位</li>
+			</ul>
+		</div>
+		<div id="app">
+			<ul>
+				<li v-for="n in names.slice(0,10)">
+					姓名：{{n.name}}<br />
+					座位：{{n.seat}}<br />
+					职业：{{n.position}}
+				</li>
+			</ul>
+			<ul>
+				<li v-for="n in names.slice(10,20)">
+					姓名：{{n.name}}<br />
+					座位：{{n.seat}}<br />
+					职业：{{n.position}}
+				</li>
+			</ul>
+			<ul>
+				<li v-for="n in names.slice(20,30)">
+					姓名：{{n.name}}<br />
+					座位：{{n.seat}}<br />
+					职业：{{n.position}}
+				</li>
+			</ul>
+			<ul>
+				<li v-for="n in names.slice(30,40)">
+					姓名：{{n.name}}<br />
+					座位：{{n.seat}}<br />
+					职业：{{n.position}}
+				</li>
+			</ul>
+		</div>
+		<script src="https://cdn.bootcss.com/vue/2.5.16/vue.js"></script>
+		<script src="https://cdn.bootcss.com/vue-resource/1.5.1/vue-resource.js"></script>
+		<script src="js/script.js"></script>
+	</body>
+</html>
